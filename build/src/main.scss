@@ -1,0 +1,238 @@
+@import "../..//node_modules/bootstrap/scss/bootstrap";
+
+// Start globals
+:root {
+    --main-font-family: "Raleway", sans-serif;
+    --pink-color: rgb(255, 88, 158);
+    --magenta: rgb(130, 97, 238);
+    --light-blue: rgb(242, 242, 254);
+    --light-font: rgba(0, 0, 0, 0.651);
+    --main-pad: 100px;
+}
+
+body {
+    font-family: var(--main-font-family) !important;
+}
+
+*::selection {
+    background-color: var(--pink-color);
+    color: white;
+}
+
+.btn {
+    font-size: 14px;
+    padding: 10px 20px;
+}
+
+.section {
+    padding-block: var(--main-pad);
+    &__text {
+        max-width: 600px;
+    }
+}
+// End globals
+
+// Start header
+header {
+    .navbar {
+        border-radius: 36px;
+    }
+    .navbar-toggler i {
+        color: var(--light-font);
+    }
+    .nav-link:hover,
+    .nav-link:focus,
+    .nav-link.active {
+        color: var(--pink-color) !important;
+    }
+    @media (max-width: 992px) {
+        .nav-link:not(:first-of-type) {
+            border-top: 1px solid var(--light-blue);
+        }
+    }
+}
+// End header
+
+// Start landing
+.main {
+    background-image: url(../images/banner-bg-66c7408619e6b.webp);
+    @media (max-width: 992px) {
+        .landing {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        
+            &__text {
+                margin-top: 0;
+            }
+        }
+    }
+    h1 {
+        @media (max-width: 576px) {
+            font-size: 1.6rem;
+        }
+    }
+    .landing__text {
+        margin-top: 150px;
+    }
+    .btn {
+        background-color: var(--pink-color) !important;
+        &:hover {
+            background-color: var(--magenta) !important;
+        }
+    }
+}
+// End landing
+
+// Start about
+.about {
+    &__cards {
+        @media (min-width: 992px) {
+            margin-top: -300px;
+        }
+    }
+    &__strategy {
+        cursor: pointer;
+        figure {
+            width: fit-content;
+            background-color: var(--magenta);
+            transition: .3s;
+        }
+        &:hover figure {
+            background-color: var(--pink-color);
+        }
+    }
+    &__content {
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            > div,
+            > figure {
+                width: 100% !important;
+            }
+            figure img {
+                margin-block: 10px;
+            }
+        }
+    }
+    &__image {
+        max-width: 280px;
+        max-height: 280px
+    }
+}
+// End about
+
+// Start work process
+.work {
+    background-image: url(../images/work-process-bg-66c7409455b7e.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__card {
+        width: 180px;
+        box-shadow: 10px 10px 0 0 rgba(255, 255, 255, .1);
+        transition: .3s;
+        &:hover {
+            transform: translateY(-10px);
+        }
+    }
+}
+// End work process
+
+// Start testimonial
+.testimonial {
+    &__job {
+        color: var(--pink-color);
+    }
+    &__person {
+        transition: .3s;
+        &:hover {
+            transform: translateX(10px);
+        }
+    }
+}
+// End testimonial
+
+// Start pricing
+.pricing {
+    background-color: var(--light-blue);
+    &__btn {
+        background-color: var(--magenta);
+        &:hover {
+            background-color: var(--pink-color);
+        }
+    }
+    &__plan {
+        &--magenta{
+            background-color: var(--magenta);
+        }
+        &--pink {
+            background-color: var(--pink-color);
+        }
+    }
+}
+// End pricing
+
+// Start facts
+.facts {
+    background-image: url(../images/fun-facts-bg-66c7408cca83e.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    > div {
+        @media (max-width: 768px) {
+            flex-direction: column;
+            img {
+                display: none;
+            }
+        }
+        gap: 20px;
+    }
+}
+// End facts
+
+// Start blog
+.blog {
+    &__btn {
+        background-color: var(--magenta);
+        &:hover {
+            background-color: var(--pink-color);
+        }
+    }
+    &__card {
+        width: 400px;
+    }
+}
+// End blog
+
+// Start contact
+.contact {
+    background-color: var(--light-blue);
+    &__btn {
+        width: fit-content;
+        background-color: var(--magenta);
+        &:hover {
+            background-color: var(--pink-color);
+        }
+    }
+    textarea {
+        height: 150px;
+        resize: none;
+    }
+}
+// End contact
+
+// Start footer
+footer {
+    background-image: linear-gradient(127deg, #a759d1 3%, var(--magenta));
+    i {
+        width: 40px;
+        height: 40px;
+        color: var(--magenta);
+        transition: .3s;
+        &:hover {
+            background-color: var(--pink-color) !important;
+            color: white;
+        }
+    }
+}
+// End footer
